@@ -1,3 +1,9 @@
 Uploading  fresh project to github
 1. git init
 2.Use git add . in your bash to add all the files to the given folder
+3.Use git status in your bash to view all the files which are going to be staged to the first commit.
+4.You can create a commit message by git commit -m 'your message', which adds the change to the local repository.
+5. Add the URL copied, which is your remote repository to where your local content from your repository is pushed.
+git remote add origin 'your_url_name'
+6. Push the code in your local repository to GitHub
+git push -u origin master
