@@ -14,5 +14,8 @@ Commit changes to existing project
 
 add existing project to new branch with new cimmits
 
-git checkout -b <branch>
 
+git checkout -b <branch>
+git push -u origin <branch>
+
+for next push you must commit changes first
