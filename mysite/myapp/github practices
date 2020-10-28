@@ -1,4 +1,4 @@
-Uploading  fresh project to github
+﻿Uploading  fresh project to github
 1. git init
 2.Use git add . in your bash to add all the files to the given folder
 3.Use git status in your bash to view all the files which are going to be staged to the first commit.
@@ -11,3 +11,8 @@ git push -u origin master
 Commit changes to existing project
 1. git add .
 2. git commit -m 'message'
+
+add existing project to new branch with new cimmits
+
+git checkout -b <branch>
+
