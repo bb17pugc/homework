@@ -1,0 +1,8 @@
+remove python
+ sudo apt autoremove python
+
+install modules using pip into virtualEnv
+ https://medium.com/@ksarthak4ever/django-websockets-and-channels-85b7d5e59dda
+
+ setting up websockets
+ https://alex-oleshkevich.medium.com/websockets-in-django-3-1-73de70c5c1ba
