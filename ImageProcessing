@@ -1,0 +1,33 @@
+# STEP 1: Import package code
+%matplotlib inline
+import matplotlib
+import os
+import numpy as np
+import cv2
+from matplotlib import pyplot as plt
+from plantcv import plantcv as pcv
+
+# STEP 2: Set global variables
+matplotlib.rcParams["figure.figsize"] = [8, 8]
+device = 0                                   # Workflow step counter
+debug = 'plot'                               # Plot debug images to the notebook
+rgb_img = '2016-09-27_1025_ch129-pos01.jpg'  # Image filename
+
+# STEP 3: Read RGB image and plot it to the notebook
+# Inputs:
+#    filename = name of image file
+#    debug    = None, print (to file), or plot (to notebook)
+img, path, filename = pcv.readimage(filename=rgb_img , mode='rgb')
+
+gray = pcv.rgb2gray(rgb_img=img)
+
+
+img_binary = pcv.threshold.binary(gray_img=gray, threshold=36, max_value=255, object_type='light')
+
+binary_img = pcv.median_blur(gray_img=img_binary, ksize=5)
+fill_image = pcv.fill(bin_img=img_binary, size=200)
+
+id_objects, obj_hierarchy = pcv.find_objects(img=binary_img, mask=fill_image)
+
+print(obj_hierarchy)
+# pcv.plot_image(fill_image)
